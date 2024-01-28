@@ -28,6 +28,16 @@ class SortedList {
     }
     return this.items[0];
   }
+  sum() {
+    return this.items.reduce((acc, value) => acc + value, 0);
+  }
+
+  avg() {
+    if (this.length === 0) {
+      throw new Error('EmptySortedList');
+    }
+    return this.sum() / this.length;
+  }
 
 
 }
